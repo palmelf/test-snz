@@ -35,6 +35,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <pampas.version>1.1-SNAPSHOT</pampas.version>
+        <pampas-webc.version>1.1</pampas-webc.version>
+        <pampas-client.version>1.1</pampas-client.version>
         <terminus-common.version>1.0-SNAPSHOT</terminus-common.version>
         <spring.version>3.2.6.RELEASE</spring.version>
         <slf4j.version>1.7.5</slf4j.version>
@@ -226,7 +228,7 @@
             <dependency>
                 <groupId>io.terminus.pampas</groupId>
                 <artifactId>pampas-client</artifactId>
-                <version>${pampas.version}</version>
+                <version>${pampas-client.version}</version>
             </dependency>
 
             <dependency>
@@ -238,7 +240,7 @@
             <dependency>
                 <groupId>io.terminus.pampas</groupId>
                 <artifactId>pampas-webc</artifactId>
-                <version>${pampas.version}</version>
+                <version>${pampas-webc.version}</version>
             </dependency>
 
             <dependency>

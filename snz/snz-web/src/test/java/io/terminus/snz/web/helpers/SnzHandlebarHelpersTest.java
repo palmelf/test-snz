@@ -1,6 +1,6 @@
 package io.terminus.snz.web.helpers;
 
-import io.terminus.pampas.engine.handlebars.HandlebarEngine;
+import io.terminus.pampas.engine.handlebars.HandlebarsEngine;
 import io.terminus.snz.web.BaseTest;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -14,7 +14,7 @@ import org.mockito.Mock;
 public class SnzHandlebarHelpersTest extends BaseTest{
 
     @Mock
-    private HandlebarEngine handlebarEngine;
+    private HandlebarsEngine handlebarEngine;
 
     @InjectMocks
     private SnzHandlebarHelpers snzHandlebarHelpers;

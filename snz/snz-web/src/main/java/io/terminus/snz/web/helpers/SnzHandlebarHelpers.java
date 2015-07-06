@@ -6,7 +6,7 @@ import com.google.common.base.Objects;
 import io.terminus.common.utils.MapBuilder;
 import io.terminus.common.utils.NumberUtils;
 import io.terminus.common.utils.Splitters;
-import io.terminus.pampas.engine.handlebars.HandlebarEngine;
+import io.terminus.pampas.engine.handlebars.HandlebarsEngine;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.joda.time.Hours;
@@ -31,7 +31,7 @@ import java.util.Map;
 @Component
 public class SnzHandlebarHelpers {
     @Autowired
-    private HandlebarEngine handlebarEngine;
+    private HandlebarsEngine handlebarEngine;
 
     @PostConstruct
     public void init() {
