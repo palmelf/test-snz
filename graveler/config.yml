@@ -2,33 +2,45 @@ paths:
   public: "public"
 groups:
   scripts:
+    paths:
+      - app/scripts
+      - vendor
     concat:
+      "/assets/scripts/config.js": "app/components/**/config.{js,coffee}"
       "/assets/scripts/app.js": "app/{scripts,components}/**/*.{js,coffee}"
-      "/assets/scripts/vendor.js": "vendor/**/*.{js,coffee}"
+      "/assets/scripts/vendor.js": "vendor/*.{js,coffee}"
+    copy:
+      "/assets/scripts": "vendor/ie/*.js"
+      "/assets/scripts": "vendor/eevee/*.js"
     order:
       - "vendor/pokeball.js"
-      - "vendor/highcharts.js"
       - "..."
       - "app/scripts/app.coffee"
   styles:
+    paths:
+      - app/styles
     concat:
-      "/assets/styles/vendor.css": "vendor/**/*.{css,scss,sass}"
-      "/assets/styles/app.css": "{app/styles/app.{css,scss,sass},app/components/**/view.{css,scss,sass}}"
+      "/assets/styles/vendor.css": "vendor/*.{css,scss,sass}"
+      "/assets/styles/app.css": "{app/styles/app.{css,scss,sass},app/styles/icons.scss,app/components/**/view.{css,scss,sass}}"
+    copy:
+      "/assets/styles": "{vendor/eevee/*.css,vendor/essage.css}"
     order:
       - "vendor/pokeball.css"
       - "vendor/base.css"
       - "..."
   images:
+    paths:
+      - app/images
     sprite:
       "../app/styles/icons.scss": "app/images/*.png"
     copy:
-      "/assets/images/": "{app/images/**/*.jpg,app/images/other-images/*.png}"
+      "/assets/images/": "{app/images/**/*.jpg,app/images/other-images/*.*}"
   views:
     paths:
       - app/views
     copy:
-      "/views": "{app/views/**/*.hbs,app/components/**/parts/*.hbs}"
-      "/components/": "app/components/**/view.hbs"
+      "/views": "app/views/**/*.hbs"
+      "/components/": "{app/components/**/view.hbs,app/components/**/other_templates/*.hbs}"
   templates:
     paths:
       - "app/components"
@@ -39,41 +51,23 @@ groups:
       - "app/files"
     copy:
       "/": "app/files/*"
+    tar:
+      "components.tar.gz": "{app/components/{eevee,offcial_decoration,design}/**/*,app/components/buyer/{items_search,trade_success}/**/*,app/components/common/{tip_and_alert,cookie,address_select_group}/**/*,app/components/user/{address_manage,apply_enter,apply_success}/**/*,app/components/seller/{category_menu,freight,shop_templates,vat_manage}/**/*,app/components/shop_decoration/cards/**/*,app/components/system/{site_manage,templates}/**/*}"
+      "components-vendor.tar.gz": "{app/components/**/*,app/scripts/locale/{en_US.coffee,zh_CN.coffee}}"
 modules:
   wrapper: "cmd"
   ignored: "vendor/**/*"
-  definition: "/scripts/app.js"
+  definition: "/assets/scripts/app.js"
 sprites:
   selector: ".icon-"
   path: "/assets/images/"
-  url: "/assets/images/"
+  url: "/mewtwo/assets/images/"
 revision:
+  prefix: ""
+  manifest: "manifest.yml"
   files:
     - /views/layout.hbs
+    - /views/eevee/editor.hbs
+    - /views/eevee/wysiwyg.hbs
 notification: true
 bundles:
-  "pokeball.js":
-    version: "master"
-    url: "http://git.aixforce.com/terminus/pokeball/raw/master/public/pokeball.js"
-  "highcharts.js":
-    version: "4.0.1"
-    url: "http://code.highcharts.com/highcharts.src.js"
-  "highcharts-more.js":
-    version: "4.0.1"
-    url: "http://code.highcharts.com/highcharts-more.src.js"
-  "highcharts-3d.js":
-    version: "4.0.1"
-    url: "http://code.highcharts.com/highcharts-3d.src.js"
-  "greatball.css":
-    version: "master"
-    url: "http://git.aixforce.com/terminus/pokeball/raw/master/public/greatball.css"
-  "base.css":
-    version: "master"
-    url: "http://git.aixforce.com/terminus/wigglytuff/raw/master/exports/base.css"
-  "../app/styles/pokeball/_variables.scss":
-    version: master
-    url: http://git.aixforce.com/terminus/pokeball/raw/master/src/styles/greatball/_variables.scss
-  masonory.js:
-    version: 3.1.5
-    url: https://raw.githubusercontent.com/desandro/masonry/v3.1.5/dist/masonry.pkgd.js
-

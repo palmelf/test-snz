@@ -1,0 +1,231 @@
+/* line 3, app/styles/base-layout.scss */
+html {
+  margin: 0;
+  _padding: 60px 0 40px 0;
+  _border: 0;
+}
+
+/* line 9, app/styles/base-layout.scss */
+body {
+  margin: 0;
+  border: 0;
+  height: 100%;
+  font-size: 12px;
+  color: #717171;
+}
+
+/* line 17, app/styles/base-layout.scss */
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 20, app/styles/base-layout.scss */
+ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 26, app/styles/base-layout.scss */
+.outer {
+  width: 100%;
+  position: absolute;
+  top: 61px;
+  bottom: 40px;
+  overflow: hidden !important;
+  _position: relative;
+  /**IE6***/
+  _top: 0px;
+  _OVERFLOW-Y: auto;
+  _OVERFLOW-X: auto;
+  *height: 100%;
+}
+
+/* line 40, app/styles/base-layout.scss */
+.navbar .navbar-collapse {
+  width: 1200px;
+}
+/* line 43, app/styles/base-layout.scss */
+.navbar .company {
+  line-height: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: 10px 5px 0 15px;
+}
+
+/* line 50, app/styles/base-layout.scss */
+.main {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+}
+/* line 55, app/styles/base-layout.scss */
+.main .category-list {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  height: 100%;
+}
+
+/* line 61, app/styles/base-layout.scss */
+.sidebar-outer {
+  float: left;
+  width: 100%;
+  background-color: #F4F4F4;
+  overflow: hidden;
+}
+
+/* line 68, app/styles/base-layout.scss */
+.body-outer {
+  float: left;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  left: 140px;
+  height: auto !important;
+  height: 600px;
+  min-height: 600px;
+}
+
+/* line 79, app/styles/base-layout.scss */
+.front-main {
+  width: 1200px;
+  margin: 0 auto;
+  height: auto !important;
+  height: 500px;
+  min-height: 500px;
+}
+/* line 85, app/styles/base-layout.scss */
+.front-main .sidebar {
+  position: relative;
+  right: 140px;
+}
+
+/* line 90, app/styles/base-layout.scss */
+.get-properties {
+  padding: 0 1em;
+}
+/* line 92, app/styles/base-layout.scss */
+.get-properties ul {
+  list-style: none;
+}
+
+/* line 96, app/styles/base-layout.scss */
+.edit-area {
+  height: 100%;
+  float: right;
+}
+/* line 99, app/styles/base-layout.scss */
+.edit-area .back-area {
+  height: 100%;
+}
+/* line 102, app/styles/base-layout.scss */
+.edit-area .front-area {
+  height: 100%;
+}
+
+/* line 106, app/styles/base-layout.scss */
+.footer {
+  border-top: 1px solid #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 10px 0;
+  overflow: hidden !important;
+  /*FF*/
+  _OVERFLOW-Y: auto;
+  /*IE6*/
+  _OVERFLOW-X: auto;
+}
+
+/* line 120, app/styles/base-layout.scss */
+.copyright {
+  width: 100%;
+}
+
+/* line 124, app/styles/base-layout.scss */
+.front-footer {
+  border-top: 1px solid #eeeeee;
+  height: 15px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 10px 0;
+}
+
+/* line 131, app/styles/base-layout.scss */
+.span-error {
+  color: #c00031 !important;
+}
+
+/* line 135, app/styles/base-layout.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 138, app/styles/base-layout.scss */
+.container-components {
+  float: left;
+  position: relative;
+  right: 140px;
+  width: 1050px;
+}
+/* line 143, app/styles/base-layout.scss */
+.container-components table {
+  width: 1050px;
+  table-layout: fixed;
+  margin-bottom: 20px;
+}
+
+/* line 150, app/styles/base-layout.scss */
+.span4 {
+  padding: 0 5px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  width: 300px;
+  text-align: right;
+}
+
+/* line 160, app/styles/base-layout.scss */
+.parent-position {
+  position: relative;
+}
+
+/* line 164, app/styles/base-layout.scss */
+.components-title {
+  font-size: 14px;
+}
+/* line 166, app/styles/base-layout.scss */
+.components-title span {
+  font-size: 12px;
+  color: #cccccc;
+}
+
+/* line 172, app/styles/base-layout.scss */
+.btn-group {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 174, app/styles/base-layout.scss */
+.btn-group ul {
+  background-color: #fff;
+  list-style-type: none !important;
+}
+/* line 177, app/styles/base-layout.scss */
+.btn-group ul li {
+  background-color: #fff;
+  border: none !important;
+}
