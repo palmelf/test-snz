@@ -17,7 +17,7 @@ target/
 .idea/
 .mine/
 logs/
-dev.properties
+dev.properties0
 dev-admin.properties
 test-local.properties
 dependency-reduced-pom.xml
