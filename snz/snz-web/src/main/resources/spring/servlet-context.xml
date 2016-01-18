@@ -47,14 +47,14 @@
         <beans:property name="defaultLocale" value="cn"/>
     </beans:bean>
 
-    <beans:bean class="io.terminus.pampas.webc.resolver.DeprecatedExceptionResolver">
+    <beans:bean class="io.terminus.pampas.webc.resolver.ExceptionResolver2">
         <beans:property name="order" value="0"/>
         <!-- 定义默认的异常处理页面，当该异常类型的注册时使用 -->
         <beans:property name="defaultErrorView" value="resource:error"/>
     </beans:bean>
 
     <beans:bean id="viewResolver" class="io.terminus.pampas.webc.resolver.HandlebarsViewResolver">
-        <beans:constructor-arg ref="handlebarEngine"/>
+        <beans:constructor-arg ref="handlebarsEngine"/>
         <beans:property name="cache" value="#{app.mode != 'dev'}"/>
     </beans:bean>
 
