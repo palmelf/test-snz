@@ -11,7 +11,8 @@
         <property name="testOnBorrow" value="#{app.redisTestOnBorrow}"/>
     </bean>
 
-    <bean id="jedisTemplate" class="io.terminus.common.redis.utils.JedisTemplate">
+    <!--jedisTemplate change to pampasJedisTemplate for design-->
+    <bean id="pampasJedisTemplate" class="io.terminus.common.redis.utils.JedisTemplate">
         <constructor-arg index="0" ref="jedisPool"/>
     </bean>
 

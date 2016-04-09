@@ -40,6 +40,7 @@
     </bean>
 
     <import resource="classpath*:/pampas/engine-context.xml"/>
+    <import resource="classpath*:/pampas/design-context.xml"/>
 
     <import resource="persistence-context.xml"/>
 

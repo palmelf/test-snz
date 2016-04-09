@@ -35,6 +35,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <pampas.version>1.1-SNAPSHOT</pampas.version>
+        <pampas-design.version>1.1</pampas-design.version>
         <pampas-webc.version>1.1</pampas-webc.version>
         <pampas-client.version>1.1</pampas-client.version>
         <terminus-common.version>1.0-SNAPSHOT</terminus-common.version>
@@ -241,6 +242,12 @@
                 <groupId>io.terminus.pampas</groupId>
                 <artifactId>pampas-webc</artifactId>
                 <version>${pampas-webc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.pampas</groupId>
+                <artifactId>pampas-design</artifactId>
+                <version>${pampas-design.version}</version>
             </dependency>
 
             <dependency>

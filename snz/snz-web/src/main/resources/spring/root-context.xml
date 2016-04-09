@@ -19,7 +19,7 @@
        http://www.springframework.org/schema/task
        http://www.springframework.org/schema/task/spring-task.xsd">
 
-    <context:component-scan base-package="io.terminus.snz,io.terminus.search"/>
+    <context:component-scan base-package="io.terminus.snz,io.terminus.search,io.terminus.pampas.engine,io.terminus.pampas.design"/>
 
     <util:properties id="app" location="classpath:app.properties"/>
 
@@ -29,6 +29,22 @@
     <bean id="redisLockOperation" class="io.terminus.common.annotation.RedisLockOperation"></bean>
     <!-- schedule job -->
     <task:annotation-driven/>
+
+    <!--for pampas engine start -->
+    <bean id="applicationConfig" class="com.alibaba.dubbo.config.ApplicationConfig">
+        <property name="name" value="#{app.appName}" ></property>
+        <property name="logger" value="slf4j"></property>
+    </bean>
+    <bean id="RegistryConfig" class="com.alibaba.dubbo.config.RegistryConfig">
+        <property name="address" value="#{app.dubboRegistry}" ></property>
+        <property name="protocol" value="zookeeper"></property>
+    </bean>
+    <bean id="protocolConfig" class="com.alibaba.dubbo.config.ProtocolConfig">
+        <property name="name" value="dubbo" ></property>
+        <property name="host" value="#{app.dubboHost}"></property>
+        <property name="port" value="#{app.dubboPort}"></property>
+    </bean>
+    <!--for pampas engine end -->
 
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basenames">
@@ -66,8 +82,12 @@
         <property name="fileEncoding" value="GBK"/>
     </bean>
 
-    <import resource="classpath*:/pampas/engine-context.xml"/>
+    <bean class="io.terminus.pampas.design.DRegister"/>
+    <!--导入design-context会导致redisTemplate重复-->
+    <!--<import resource="classpath*:/pampas/design-context.xml"/>-->
     <import resource="classpath*:/spring/redis-persistence-context.xml"/>
+    <import resource="classpath*:/pampas/engine-context.xml"/>
+
 
     <beans profile="test,test-admin,test-local,prod">
         <dubbo:application name="#{app.appName}"/>
