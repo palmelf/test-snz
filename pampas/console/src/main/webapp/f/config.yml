@@ -88,15 +88,3 @@ bundles:
   essage.css:
     version: "0.1.0"
     url: "https://raw.github.com/sofish/essage/master/src/essage.css"
-  "../app/files/assets/eevee/eevee.js":
-    version: master
-    url: http://git.aixforce.com/terminus/eevee/raw/master/public/scripts/eevee.js
-  "../app/files/assets/eevee/eevee.css":
-    version: master
-    url: http://git.aixforce.com/terminus/eevee/raw/master/public/styles/eevee.css
-  "../app/files/assets/eevee/vendor.js":
-    version: master
-    url: http://git.aixforce.com/terminus/eevee/raw/master/public/scripts/vendor.js
-  "../app/files/assets/eevee/vendor.css":
-    version: master
-    url: http://git.aixforce.com/terminus/eevee/raw/master/public/styles/vendor.css

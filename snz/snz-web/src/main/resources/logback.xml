@@ -46,6 +46,7 @@
     <!-- the level of the root level is set to DEBUG by default.       -->
     <root level="${logLevel}">
         <appender-ref ref="${logDefaultFile}"/>
+        <appender-ref ref="FILE"/>
     </root>
 
 

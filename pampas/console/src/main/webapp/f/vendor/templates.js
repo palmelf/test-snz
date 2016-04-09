@@ -1,1 +1,180 @@
-!function(){var a=Handlebars.template,n=Handlebars.templates=Handlebars.templates||{};n["group/app_list/templates/app_form_modal_content"]=a(function(a,n,e,l,i){function s(){return"readonly"}function t(){return'\n          <i class="lock icon"></i>\n          '}function p(){return'\n          <i class="asterisk icon"></i>\n          '}function o(a){var n;return h((n=a&&a.app,n=null==n||n===!1?n:n.domain,typeof n===v?n.apply(a):n))}function r(){return"{Domain}"}function d(a){var n;return h((n=a&&a.app,n=null==n||n===!1?n:n.key,typeof n===v?n.apply(a):n))}function c(){return"{App Key}"}this.compilerInfo=[4,">= 1.0.0"],e=this.merge(e,a.helpers),i=i||{};var u,f,m="",v="function",h=this.escapeExpression,y=this;return m+='\n<form class="content ui form">\n  <div class="two fields">\n    <div class="field">\n      <label>Key</label>\n      <div class="ui labeled input">\n        <input name="key" type="text" placeholder="App Key" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.key,typeof u===v?u.apply(n):u))+'" ',u=e["if"].call(n,n&&n.app,{hash:{},inverse:y.noop,fn:y.program(1,s,i),data:i}),(u||0===u)&&(m+=u),m+='>\n        <div class="ui corner label">\n          ',u=e["if"].call(n,n&&n.app,{hash:{},inverse:y.program(5,p,i),fn:y.program(3,t,i),data:i}),(u||0===u)&&(m+=u),m+='\n        </div>\n      </div>\n    </div>\n    <div class="field">\n      <label>Domain</label>\n      <div class="ui labeled input">\n        <input name="domain" type="text" placeholder="Domain" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.domain,typeof u===v?u.apply(n):u))+'">\n        <div class="ui corner label">\n          <i class="asterisk icon"></i>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="field">\n    <label>Proxy Root</label>\n    <input name="proxyRoot" type="text" placeholder="default: http://',u=e["if"].call(n,n&&n.app,{hash:{},inverse:y.program(9,r,i),fn:y.program(7,o,i),data:i}),(u||0===u)&&(m+=u),m+='/" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.proxyRoot,typeof u===v?u.apply(n):u))+'">\n  </div>\n  <div class="field">\n    <label>Assets Home</label>\n    <input name="assetsHome" type="text" placeholder="default: ',(f=e.rootPath)?u=f.call(n,{hash:{},data:i}):(f=n&&n.rootPath,u=typeof f===v?f.call(n,{hash:{},data:i}):f),m+=h(u),u=e["if"].call(n,n&&n.app,{hash:{},inverse:y.program(13,c,i),fn:y.program(11,d,i),data:i}),(u||0===u)&&(m+=u),m+='" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.assetsHome,typeof u===v?u.apply(n):u))+'">\n  </div>\n  <div class="field">\n    <label>Config Path</label>\n    <input name="configPath" type="text" placeholder="default: ',(f=e.rootPath)?u=f.call(n,{hash:{},data:i}):(f=n&&n.rootPath,u=typeof f===v?f.call(n,{hash:{},data:i}):f),m+=h(u),u=e["if"].call(n,n&&n.app,{hash:{},inverse:y.program(13,c,i),fn:y.program(11,d,i),data:i}),(u||0===u)&&(m+=u),m+='/back_config.yaml" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.configPath,typeof u===v?u.apply(n):u))+'">\n  </div>\n  <div class="two fields">\n    <div class="field">\n      <label>Config Js File</label>\n      <input name="configJsFile" type="text" placeholder="default: assets/scripts/config.js" value="'+h((u=n&&n.app,u=null==u||u===!1?u:u.configJsFile,typeof u===v?u.apply(n):u))+'">\n    </div>\n    <div class="field">\n      <label>Description</label>\n      \n      <textarea class="desc" name="desc">'+h((u=n&&n.app,u=null==u||u===!1?u:u.desc,typeof u===v?u.apply(n):u))+"</textarea>\n    </div>\n  </div>\n</form>\n"}),n["group/site_list/templates/site_form_modal_content"]=a(function(a,n,e,l,i){this.compilerInfo=[4,">= 1.0.0"],e=this.merge(e,a.helpers),i=i||{};var s,t,p="",o="function",r=this.escapeExpression;return p+='\n<form class="content ui form">\n  <input type="hidden" name="id" value="',(t=e.id)?s=t.call(n,{hash:{},data:i}):(t=n&&n.id,s=typeof t===o?t.call(n,{hash:{},data:i}):t),p+=r(s)+'">\n  <input type="hidden" name="app" value="',(t=e.app)?s=t.call(n,{hash:{},data:i}):(t=n&&n.app,s=typeof t===o?t.call(n,{hash:{},data:i}):t),p+=r(s)+'">\n  <div class="field">\n    <label>Name</label>\n    <div class="ui labeled input">\n      <input name="name" type="text" placeholder="Name" value="',(t=e.name)?s=t.call(n,{hash:{},data:i}):(t=n&&n.name,s=typeof t===o?t.call(n,{hash:{},data:i}):t),p+=r(s)+'">\n      <div class="ui corner label">\n        <i class="asterisk icon"></i>\n      </div>\n    </div>\n  </div>\n  <div class="field">\n    <label>Sub Domain</label>\n    <div class="ui labeled input">\n      <input name="subdomain" type="text" placeholder="Sub Domain" value="',(t=e.subdomain)?s=t.call(n,{hash:{},data:i}):(t=n&&n.subdomain,s=typeof t===o?t.call(n,{hash:{},data:i}):t),p+=r(s)+'">\n      <div class="ui corner label">\n        <i class="asterisk icon"></i>\n      </div>\n    </div>\n  </div>\n  <div class="ui icon info message" style="display:block;">\n    <i class="info icon"></i>\n    <div class="content">\n      <p>\n        sub domain \u53ef\u9009\u586b <span class="ui label">/</span> \u6216\u8005 <span class="ui label">\u5b57\u6bcd\u6570\u5b57\u4e0b\u5212\u7ebf\u6a2a\u7ebf\u7ec4\u6210\u7684\u5b57\u4e32</span>\n        <br/>\n        \u5f53\u586b\u5199 <span class="ui label">/</span> \u65f6\u4ee3\u8868\u662f\u8be5 app \u7684\u4e3b\u7ad9\n      </p>\n    </div>\n  </div>\n</form>\n'}),n["settings/users/user_list/templates/user_form_modal_content"]=a(function(a,n,e,l,i){function s(){return"readonly"}function t(){return'\n          <i class="lock icon"></i>\n          '}function p(){return'\n          <i class="asterisk icon"></i>\n          '}function o(){return'\n    <input name="password" type="password" placeholder="password for login">\n    '}function r(){return'\n    <div class="ui labeled input">\n      <input name="password" type="password" placeholder="password for login">\n      <div class="ui corner label">\n        <i class="asterisk icon"></i>\n      </div>\n    </div>\n    '}this.compilerInfo=[4,">= 1.0.0"],e=this.merge(e,a.helpers),i=i||{};var d,c="",u="function",f=this.escapeExpression,m=this;return c+='\n<form class="content ui form">\n  <div class="two fields">\n    <div class="field">\n      <label>Name</label>\n      <div class="ui labeled input">\n        <input name="name" type="text" placeholder="username for login" value="'+f((d=n&&n.user,d=null==d||d===!1?d:d.name,typeof d===u?d.apply(n):d))+'" ',d=e["if"].call(n,n&&n.user,{hash:{},inverse:m.noop,fn:m.program(1,s,i),data:i}),(d||0===d)&&(c+=d),c+='>\n        <div class="ui corner label">\n          ',d=e["if"].call(n,n&&n.user,{hash:{},inverse:m.program(5,p,i),fn:m.program(3,t,i),data:i}),(d||0===d)&&(c+=d),c+='\n        </div>\n      </div>\n    </div>\n    <div class="field">\n      <label>Real Name</label>\n      <div class="ui labeled input">\n        <input name="realName" type="text" placeholder="real name" value="'+f((d=n&&n.user,d=null==d||d===!1?d:d.realName,typeof d===u?d.apply(n):d))+'">\n        <div class="ui corner label">\n          <i class="asterisk icon"></i>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="field">\n    <label>Email</label>\n    <div class="ui labeled input">\n      <input name="email" type="text" placeholder="email for notification" value="'+f((d=n&&n.user,d=null==d||d===!1?d:d.email,typeof d===u?d.apply(n):d))+'">\n      <div class="ui corner label">\n        <i class="asterisk icon"></i>\n      </div>\n    </div>\n  </div>\n  <div class="field">\n    <label>Password</label>\n    ',d=e["if"].call(n,n&&n.user,{hash:{},inverse:m.program(9,r,i),fn:m.program(7,o,i),data:i}),(d||0===d)&&(c+=d),c+="\n  </div>\n</form>\n"}),n["settings/users/user_permission/templates/permission_item"]=a(function(a,n,e,l,i){this.compilerInfo=[4,">= 1.0.0"],e=this.merge(e,a.helpers),i=i||{};var s="",t="function",p=this.escapeExpression;return s+='\n<div class="item" data-permission="'+p(typeof n===t?n.apply(n):n)+'">\n  <div class="right floated">\n    <a href="#" class="js-link-del-permission"><i class="trash icon"></i></a>\n  </div>\n  '+p(typeof n===t?n.apply(n):n)+"\n</div>\n"})}();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+  templates["group/app_list/templates/app_form_modal_content"] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  
+  return "readonly";
+  }
+
+function program3(depth0,data) {
+  
+  
+  return "\n          <i class=\"lock icon\"></i>\n          ";
+  }
+
+function program5(depth0,data) {
+  
+  
+  return "\n          <i class=\"asterisk icon\"></i>\n          ";
+  }
+
+function program7(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.domain)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program9(depth0,data) {
+  
+  
+  return "{Domain}";
+  }
+
+function program11(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.key)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program13(depth0,data) {
+  
+  
+  return "{App Key}";
+  }
+
+  buffer += "\n<form class=\"content ui form\">\n  <div class=\"two fields\">\n    <div class=\"field\">\n      <label>Key</label>\n      <div class=\"ui labeled input\">\n        <input name=\"key\" type=\"text\" placeholder=\"App Key\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.key)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.app), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += ">\n        <div class=\"ui corner label\">\n          ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.app), {hash:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n        </div>\n      </div>\n    </div>\n    <div class=\"field\">\n      <label>Domain</label>\n      <div class=\"ui labeled input\">\n        <input name=\"domain\" type=\"text\" placeholder=\"Domain\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.domain)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n        <div class=\"ui corner label\">\n          <i class=\"asterisk icon\"></i>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"field\">\n    <label>Proxy Root</label>\n    <input name=\"proxyRoot\" type=\"text\" placeholder=\"default: http://";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.app), {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "/\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.proxyRoot)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n  </div>\n  <div class=\"field\">\n    <label>Assets Home</label>\n    <input name=\"assetsHome\" type=\"text\" placeholder=\"default: ";
+  if (helper = helpers.rootPath) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rootPath); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1);
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.app), {hash:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.assetsHome)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n  </div>\n  <div class=\"field\">\n    <label>Config Path</label>\n    <input name=\"configPath\" type=\"text\" placeholder=\"default: ";
+  if (helper = helpers.rootPath) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.rootPath); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1);
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.app), {hash:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "/back_config.yaml\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.configPath)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n  </div>\n  <div class=\"two fields\">\n    <div class=\"field\">\n      <label>Config Js File</label>\n      <input name=\"configJsFile\" type=\"text\" placeholder=\"default: assets/scripts/config.js\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.configJsFile)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n    </div>\n    <div class=\"field\">\n      <label>Description</label>\n      \n      <textarea class=\"desc\" name=\"desc\">"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.app)),stack1 == null || stack1 === false ? stack1 : stack1.desc)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</textarea>\n    </div>\n  </div>\n</form>\n";
+  return buffer;
+  });
+templates["group/site_list/templates/site_form_modal_content"] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "\n<form class=\"content ui form\">\n  <input type=\"hidden\" name=\"id\" value=\"";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n  <input type=\"hidden\" name=\"app\" value=\"";
+  if (helper = helpers.app) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.app); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n  <div class=\"field\">\n    <label>Name</label>\n    <div class=\"ui labeled input\">\n      <input name=\"name\" type=\"text\" placeholder=\"Name\" value=\"";
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n      <div class=\"ui corner label\">\n        <i class=\"asterisk icon\"></i>\n      </div>\n    </div>\n  </div>\n  <div class=\"field\">\n    <label>Sub Domain</label>\n    <div class=\"ui labeled input\">\n      <input name=\"subdomain\" type=\"text\" placeholder=\"Sub Domain\" value=\"";
+  if (helper = helpers.subdomain) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.subdomain); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n      <div class=\"ui corner label\">\n        <i class=\"asterisk icon\"></i>\n      </div>\n    </div>\n  </div>\n  <div class=\"ui icon info message\" style=\"display:block;\">\n    <i class=\"info icon\"></i>\n    <div class=\"content\">\n      <p>\n        sub domain 可选填 <span class=\"ui label\">/</span> 或者 <span class=\"ui label\">字母数字下划线横线组成的字串</span>\n        <br/>\n        当填写 <span class=\"ui label\">/</span> 时代表是该 app 的主站\n      </p>\n    </div>\n  </div>\n</form>\n";
+  return buffer;
+  });
+templates["settings/users/user_list/templates/user_form_modal_content"] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  
+  return "readonly";
+  }
+
+function program3(depth0,data) {
+  
+  
+  return "\n          <i class=\"lock icon\"></i>\n          ";
+  }
+
+function program5(depth0,data) {
+  
+  
+  return "\n          <i class=\"asterisk icon\"></i>\n          ";
+  }
+
+function program7(depth0,data) {
+  
+  
+  return "\n    <input name=\"password\" type=\"password\" placeholder=\"password for login\">\n    ";
+  }
+
+function program9(depth0,data) {
+  
+  
+  return "\n    <div class=\"ui labeled input\">\n      <input name=\"password\" type=\"password\" placeholder=\"password for login\">\n      <div class=\"ui corner label\">\n        <i class=\"asterisk icon\"></i>\n      </div>\n    </div>\n    ";
+  }
+
+  buffer += "\n<form class=\"content ui form\">\n  <div class=\"two fields\">\n    <div class=\"field\">\n      <label>Name</label>\n      <div class=\"ui labeled input\">\n        <input name=\"name\" type=\"text\" placeholder=\"username for login\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.user)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.user), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += ">\n        <div class=\"ui corner label\">\n          ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.user), {hash:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n        </div>\n      </div>\n    </div>\n    <div class=\"field\">\n      <label>Real Name</label>\n      <div class=\"ui labeled input\">\n        <input name=\"realName\" type=\"text\" placeholder=\"real name\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.user)),stack1 == null || stack1 === false ? stack1 : stack1.realName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n        <div class=\"ui corner label\">\n          <i class=\"asterisk icon\"></i>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"field\">\n    <label>Email</label>\n    <div class=\"ui labeled input\">\n      <input name=\"email\" type=\"text\" placeholder=\"email for notification\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.user)),stack1 == null || stack1 === false ? stack1 : stack1.email)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n      <div class=\"ui corner label\">\n        <i class=\"asterisk icon\"></i>\n      </div>\n    </div>\n  </div>\n  <div class=\"field\">\n    <label>Password</label>\n    ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.user), {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  </div>\n</form>\n";
+  return buffer;
+  });
+templates["settings/users/user_permission/templates/permission_item"] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "\n<div class=\"item\" data-permission=\""
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\">\n  <div class=\"right floated\">\n    <a href=\"#\" class=\"js-link-del-permission\"><i class=\"trash icon\"></i></a>\n  </div>\n  "
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\n</div>\n";
+  return buffer;
+  });
+
+})();
