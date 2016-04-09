@@ -1,6 +1,6 @@
 {
   "serverPort": 3000,
-  "dataFile": "test/data.js",
+  "dataFiles": ["test/data.js"],
   "extraHelpers": [
     "test/extraHelpers.js"
   ]

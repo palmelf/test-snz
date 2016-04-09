@@ -13,4 +13,12 @@ module.exports = function (handlebars) {
   handlebars.registerHelper("isEmpty", function(a, options) {
     return (a == undefined || a === "") ? options.fn(this) : options.inverse(this);
   });
+  handlebars.registerHelper("contain", function(a,b, options) {
+    console.log("我在extraHelper.js中,尚未实现contain")
+    return options.fn(this) ;
+  }); 
+  handlebars.registerHelper("containAny", function(a,b, options) {
+    console.log("我在extraHelper.js中,尚未实现containAny")
+    return options.fn(this) ;
+  });  
 }

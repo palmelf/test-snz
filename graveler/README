@@ -2,3 +2,8 @@
 
 * use new style
 * use same layout of rrs
+
+
+---
+
+执行 jiggly时报(error when load extra helper file: test-snz\graveler\test\extraHelpers.js { [Error: Cannot find module 'lodash'] code: 'MODULE_NOT_FOUND' }) 请在当前路径执行 （npm install -d lodash）
